@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<title>Ruokapalvelut</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <meta charset="utf-8">
+<body>
+
+<header class="w3-container w3-teal w3-center">
+  <h1>Savilahden ruokapalvelut OY</h1>
+</header>
+    
+    <div class="w3-container">
+  <h2>Herkkujen herkut!</h2>
+  <p>Näämä herkulliset ateriat suorastaan vievät kielen mennessään! Katso tästä suosikkiaterioitamme!</p>
+</div>
+
+<div class="w3-content w3-display-container">
+
+<div class="w3-display-container mySlides">
+  <img src="laatikko.jpg" style="width:100%">
+  <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+    Makaronilaatikkoa!
+  </div>
+</div>
+
+<div class="w3-display-container mySlides">
+  <img src="keitto.jpg" style="width:100%">
+  <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
+    Kalakeittoa!
+  </div>
+</div>
+
+<div class="w3-display-container mySlides">
+  <img src="https://public.keskofiles.com/f/k-ruoka/recipe/970?w=1440&h=640&fit=crop&q=60" style="width:100%">
+  <div class="w3-display-topleft w3-large w3-container w3-padding-16 w3-black">
+   Karjalanpaistia!
+  </div>
+</div>
+
+
+
+
+
+<button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button>
+<button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button>
+
+</div>
+<div class="w3-row w3-container">
+  
+  <a href="palaute.html"><div class="w3-col s6 w3-green w3-center" style="margin-top: 3%;">
+    <p>Ota Yhteyttä!</p>
+  </div></a>
+  <a href="tilaus.html"><div class="w3-col s6 w3-dark-grey w3-center" style="margin-top: 3%;">
+    <p>Tilaamaan herkut!</p>
+  </div></a>
+</div>
+
+    <br>
+<button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black w3-animate-right">Henkilökunnan kirjautuminen!</button>
+
+  <div id="id01" class="w3-modal">
+    <div class="w3-modal-content w3-animate-right">
+      <div class="w3-container">
+        <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright ">&times;</span>
+        <p>Syötä salasana!</p>
+        <input id="password" class="w3-input w3-border w3-animate-input" type="password" style="width:30%">
+          <br>
+          <button onclick="salasana()" class="w3-button w3-black w3-hover-white" style="margin-bottom: 2%;">Kirjaudu</button>
+          
+      </div>
+    </div>
+  </div>    
+    
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+    
+    <script type="text/javascript">
+function salasana(){
+var password = document.getElementById('password').value;
+if (password == "Salasana")
+{alert('Salasana hyväksytty!')
+window.open('tilaukset.html')}
+else
+{alert('Eipä ollu!')}
+}
+</script>
+
+
+
+</body>
+</html>

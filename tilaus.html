@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Herkkujen tilaaminen!</title>
+	<meta name="author" content="Your Name">
+	<meta name="description" content="Example description">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body onload="list();">
+	<header class="w3-container w3-teal w3-center"><h1>Tilaa ruokaa!<p><a href="index.html"><button class="w3-button w3-block w3-black">Etusivulle</button></a></p></h1></header>
+	<main>
+        
+                
+    <div class="w3-container">
+  
+  <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black">Ostamaan!</button>
+        <div id="id01" class="w3-modal">
+    <div class="w3-modal-content w3-animate-top w3-card-4">
+      <header class="w3-container w3-teal"> 
+        <span onclick="document.getElementById('id01').style.display='none'" 
+        class="w3-button w3-display-topright">&times;</span>
+        <h2>Yhteystiedot ja maksutapa!</h2>
+      </header>
+      <div class="w3-container">
+       <form class="w3-container">
+
+<label>Etunimi</label>
+<input id="nimi" class="w3-input" type="text">
+
+<label>Sukunimi</label>
+<input id="snimi" class="w3-input" type="text">
+<label>Osoite</label>        
+ <input id="osoite" class="w3-input" type="text"> 
+<label>Posti Nro</label>        
+ <input id="postinro" class="w3-input" type="text">   
+<label>Maksutapa</label>   
+ <input id="paypal" class="w3-check" type="checkbox">
+<label><i class="fa fa-paypal" style="font-size:36px"></i></label>
+
+<input id="visa" class="w3-check" type="checkbox">
+<label><i class="fa fa-cc-visa" style="font-size:36px"></i></label>
+
+<input id="mastercard" class="w3-check" type="checkbox">
+<label><i class="fa fa-cc-mastercard" style="font-size:36px"></i></label>           
+
+
+</form> 
+          
+      </div>
+      <footer class="w3-container w3-teal">
+      <button id="tilaus" onclick="tiedot()" class="w3-button w3-green" >Osta!</button>
+      </footer>
+    </div>
+  </div>
+</div>
+        
+          <div id="kori" class="w3-dropdown-hover w3-animate-zoom w3-right">
+    <button onmouseover="xd()" class="w3-sbutton w3-black"><i class="fa fa-shopping-cart" style="font-size:36px"></i></button>
+    <div class="w3-dropdown-content w3-bar-block w3-border" style="right:0">
+      <div id="kori2">
+        <p>Ostoskori</p>
+        </div>
+      
+      
+    </div>
+  </div>
+        
+        
+        
+        <br>
+            <div class="w3-bar">
+    <button id="liha" class="w3-bar-item w3-button w3-teal">Liha!</button>
+        <button id="kasvis" class="w3-bar-item w3-button w3-teal">Kasvis!</button>
+        <button id="kala" class="w3-bar-item w3-button w3-teal">Kalaruoka!</button>
+        <button id="kana" class="w3-bar-item w3-button w3-teal">Kanaruoka!</button>
+        <button id="lakglut" class="w3-bar-item w3-button w3-teal">Laktoositon/Gluteeniton!</button>
+            </div>
+        
+        
+            
+            
+            
+       
+        
+        <div id="lista"></div>
+    
+    </main>
+	<footer>  </footer>
+	<script src="list.js"></script>
+</body>
+
+</html>
